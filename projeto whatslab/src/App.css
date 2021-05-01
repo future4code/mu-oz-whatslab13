@@ -15,7 +15,8 @@
     grid-template-rows: 38fr 1fr ;
     grid-column-start: 2;
     border: 1px solid black;
-    height: 100vh; 
+    height: 100vh;
+    padding: 1vh;
 }
 
 .messenger-info {
