@@ -30,5 +30,6 @@
 
     padding: 25px;
     display: flex;
+    flex-direction: column;
     align-self: flex-end;
 }
