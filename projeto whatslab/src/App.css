@@ -10,26 +10,38 @@
 }
 
 .messenger-container {
-    
+    border: 1px solid black;
     display: grid;
     grid-template-rows: 38fr 1fr ;
     grid-column-start: 2;
-    border: 1px solid black;
-    height: 100vh;
-    padding: 1vh;
+    height: auto;
+    padding: 2vh;
+    background-color: #dcd4cd;
 }
 
 .messenger-info {
     display: grid; 
     grid-template-columns: 2fr 6fr 1fr;
     grid-row-start: 2;
-    height: 25px;   
+    width: 33vw;
+    position: fixed;
+    bottom: 2vh;
 }
 
 .list-message {
-
-    padding: 25px;
+    margin-bottom: 2vh;
     display: flex;
-    flex-direction: column;
-    align-self: flex-end;
+    align-items: flex-start;
+    width: 33vw;
+    height: 92vh;
+    overflow-y: auto;
+    flex-direction: column-reverse;
+}
+.tampa {
+    background-color: #dcd4cd;
+    width: 33vw;
+    height: 5vh;
+    position: fixed;
+    bottom: 0;
+    border-bottom: 1px solid black;
 }
