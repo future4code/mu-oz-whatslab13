@@ -1,7 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
-import './App.css';
-import {ImprimeMensagem} from "./adicionar.js";
+import style from './App.css';
 
 class App extends React.Component {
   state={
@@ -28,16 +26,17 @@ class App extends React.Component {
   };
 
   render(){
-    const componenteMensagem = [...this.state.mensagem].map((mensagem) => {
+    const componenteMensagem = [...this.state.mensagem].map((mensagem, index) => {
       if (mensagem.nomeUsuario) {
       return(
-        <p className="novaMensagem">
+        <p key={index} className="novaMensagem">
         <span><b>{mensagem.nomeUsuario}: </b></span>
           {mensagem.mensagemUsuario}
         </p>
       )}
 
-    })    
+      })
+    
     return (
       <div className="App">
         <div className="page-section-container">
@@ -45,25 +44,23 @@ class App extends React.Component {
             <div className="list-message">
               {componenteMensagem}
             </div>
-            <div className="tampa">
               <form  className="messenger-info" onSubmit={this.ImprimeMensagem}>
-                <input 
-                  value={this.state.valorInputUsuario}
-                  onChange={this.onChangeInputUsuario}
-                  placeholder="Usuário"
-                />
-                <input 
-                  value={this.state.valorInputMensagem}
-                  onChange={this.onChangeInputMensagem}             
-                  placeholder="Mensagem"
-                />
-                <button type={'submit'}>Enviar</button>
+                  <input className="input-usuario"
+                    value={this.state.valorInputUsuario}
+                    onChange={this.onChangeInputUsuario}
+                    placeholder="Usuário"
+                  />
+                  <input className="input-mensagem"
+                    value={this.state.valorInputMensagem}
+                    onChange={this.onChangeInputMensagem}             
+                    placeholder="Mensagem..."
+                  />
+                  <button className="send-button" type={'submit'}>Enviar</button>
               </form>
             </div>
           </div>
         </div> 
-      </div>
     )
   }
 }
-export default App
+export default App;
