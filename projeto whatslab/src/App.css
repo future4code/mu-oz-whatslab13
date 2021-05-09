@@ -41,7 +41,8 @@
 }
 
 .send-button {
-    height: 30px;
+    height: 4vh;
+    width: 5vw;
     font-weight: bold;
     font-size: 16px;
     color: white;
@@ -49,12 +50,16 @@
 }
 
 .input-usuario {
+    height: 4vh;
+    width: 10vw;
     margin-right: 15px;
     padding-left: 5px;
     font-weight: bold;
 }
 
 .input-mensagem {
+    height: 4vh;
+    width: 31vw;
     margin-right: 15px;
     padding-left: 5px;
     font-weight: bold;
