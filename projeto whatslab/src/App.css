@@ -6,7 +6,9 @@
 
 .page-section-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;  
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #F9B24E; 
+    
 }
 
 .messenger-container {
@@ -14,34 +16,46 @@
     display: grid;
     grid-template-rows: 38fr 1fr ;
     grid-column-start: 2;
-    height: auto;
+    grid-column-end: span 2;
+    height: 100vh;
     padding: 2vh;
-    background-color: #dcd4cd;
+    background-color: #A8BBC6;
 }
 
 .messenger-info {
     display: grid; 
     grid-template-columns: 2fr 6fr 1fr;
-    grid-row-start: 2;
-    width: 33vw;
-    position: fixed;
-    bottom: 2vh;
+    grid-row-start: 2; 
 }
 
 .list-message {
     margin-bottom: 2vh;
     display: flex;
     align-items: flex-start;
-    width: 33vw;
-    height: 92vh;
     overflow-y: auto;
-    flex-direction: column-reverse;
+    flex-direction: column-reverse;  
 }
-.tampa {
-    background-color: #dcd4cd;
-    width: 33vw;
-    height: 5vh;
-    position: fixed;
-    bottom: 0;
-    border-bottom: 1px solid black;
+
+.novaMensagem {
+    margin: 5px; 
+}
+
+.send-button {
+    height: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    background-color: #FE7E02;
+}
+
+.input-usuario {
+    margin-right: 15px;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.input-mensagem {
+    margin-right: 15px;
+    padding-left: 5px;
+    font-weight: bold;
 }
