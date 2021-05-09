@@ -9,12 +9,13 @@ class App extends React.Component {
     valorInputUsuario:'',
     valorInputMensagem:''
   }
-  ImprimeMensagem = () =>{
+  ImprimeMensagem = (event) =>{
+    event.preventDefault()
     const novaMensagem = {
       nomeUsuario: this.state.valorInputUsuario,
       mensagemUsuario: this.state.valorInputMensagem
     }
-    const novosMensagens = [...this.state.mensagem,novaMensagem]
+    const novosMensagens = [novaMensagem, ...this.state.mensagem]
     this.setState({mensagem: novosMensagens})
     this.setState({ valorInputMensagem:'' })
   }
@@ -30,7 +31,7 @@ class App extends React.Component {
     const componenteMensagem = [...this.state.mensagem].map((mensagem) => {
       if (mensagem.nomeUsuario) {
       return(
-        <p>
+        <p className="novaMensagem">
         <span><b>{mensagem.nomeUsuario}: </b></span>
           {mensagem.mensagemUsuario}
         </p>
@@ -44,18 +45,20 @@ class App extends React.Component {
             <div className="list-message">
               {componenteMensagem}
             </div>
-            <div className="messenger-info">
-              <input 
-                value={this.state.valorInputUsuario}
-                onChange={this.onChangeInputUsuario}
-                placeholder="Usuário"
-              />
-              <input 
-                value={this.state.valorInputMensagem}
-                onChange={this.onChangeInputMensagem}             
-                placeholder="Mensagem"
-              />
-              <button onClick={this.ImprimeMensagem}>Enviar</button>
+            <div className="tampa">
+              <form  className="messenger-info" onSubmit={this.ImprimeMensagem}>
+                <input 
+                  value={this.state.valorInputUsuario}
+                  onChange={this.onChangeInputUsuario}
+                  placeholder="Usuário"
+                />
+                <input 
+                  value={this.state.valorInputMensagem}
+                  onChange={this.onChangeInputMensagem}             
+                  placeholder="Mensagem"
+                />
+                <button type={'submit'}>Enviar</button>
+              </form>
             </div>
           </div>
         </div> 
