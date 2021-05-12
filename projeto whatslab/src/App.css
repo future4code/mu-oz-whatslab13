@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.page-section-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #F9B24E; 
+    
+}
+
+.messenger-container {
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: 38fr 1fr ;
+    grid-column-start: 2;
+    grid-column-end: span 2;
+    height: 100vh;
+    padding: 2vh;
+    background-color: #A8BBC6;
+}
+
+.messenger-info {
+    display: grid; 
+    grid-template-columns: 2fr 6fr 1fr;
+    grid-row-start: 2; 
+}
+
+.list-message {
+    margin-bottom: 2vh;
+    display: flex;
+    align-items: flex-start;
+    overflow-y: auto;
+    flex-direction: column-reverse;  
+}
+
+.novaMensagem {
+    margin: 5px; 
+}
+
+.send-button {
+    height: 4vh;
+    width: 5vw;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    background-color: #FE7E02;
+}
+
+.input-usuario {
+    height: 4vh;
+    width: 10vw;
+    margin-right: 15px;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.input-mensagem {
+    height: 4vh;
+    width: 31vw;
+    margin-right: 15px;
+    padding-left: 5px;
+    font-weight: bold;
+}
